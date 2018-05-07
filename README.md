@@ -23,6 +23,7 @@ Após preencher os dois campos, que são obrigatórios, e ajustar o tamanho, bas
 
 # Autor
 
+Ezequiel da Silva Daniel  
 [Blog](https://ezequieldaniel.wordpress.com/)  
 [Email](ezequielsd@gmail.com)
 
