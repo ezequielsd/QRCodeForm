@@ -63,9 +63,9 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(11, 113);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(250, 16);
+            this.label1.Size = new System.Drawing.Size(258, 16);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Inserir o texto a ser gravado no QRCode:";
+            this.label1.Text = "Informe o texto a ser gravado no QRCode:";
             // 
             // txtTextoQRCode
             // 
@@ -98,9 +98,9 @@
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(11, 58);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(271, 16);
+            this.label2.Size = new System.Drawing.Size(278, 16);
             this.label2.TabIndex = 4;
-            this.label2.Text = "Insera um nome para o arquivo de QRCode:";
+            this.label2.Text = "Informe um nome para o arquivo de QRCode:";
             // 
             // label3
             // 

@@ -82,8 +82,8 @@ namespace QRCodeForm
             }
             finally
             {
-                txtNomeQRCode.Clear();
-                txtTextoQRCode.Clear();
+                //txtNomeQRCode.Clear();
+                //txtTextoQRCode.Clear();
             }
         }
 
