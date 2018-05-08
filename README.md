@@ -30,3 +30,10 @@ Ezequiel da Silva Daniel
 # Licença
 
 [MIT]
+
+# Release
+
+A versão Release do programa, apenas executável, pode ser baixado no link abaixo:
+
+
+[QRCode Form](../Release/QRCodeForm.zip)

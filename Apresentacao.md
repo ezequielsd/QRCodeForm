@@ -33,5 +33,7 @@ Ezequiel da Silva Daniel
 
 # Release
 
-O execuavel do programa pode ser baixado aqui:  
-[QRCodeForm](../Release/QRCode Form.zip)
+A versão Release do programa, apenas executável, pode ser baixado no link abaixo:
+
+
+[QRCode Form](../Release/QRCodeForm.zip)
