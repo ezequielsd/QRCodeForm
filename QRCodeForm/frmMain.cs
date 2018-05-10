@@ -48,7 +48,7 @@ namespace QRCodeForm
         {
             try
             {
-                if(cmbTipoInformacao.SelectedIndex != 0)
+                if(cmbTipoInformacao.SelectedIndex != -1)
                 {
                     var barcodeWriter = new BarcodeWriter();
                     barcodeWriter.Format = BarcodeFormat.QR_CODE;
