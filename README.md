@@ -30,6 +30,10 @@ Após preencher as informações necessárias, basta clicar no botão **"Gerar Q
 ![Tela3](Tela3.PNG)
 
 
+# Pacotes de terceiro
+
+* [zxing](https://github.com/zxing/zxing)
+
 
 # Autor
 
