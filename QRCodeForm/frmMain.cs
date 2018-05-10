@@ -18,9 +18,7 @@ namespace QRCodeForm
     {
         private string filePath = Path.Combine(Environment.CurrentDirectory, "QRCode");
         private string fileLocalitation = String.Empty;
-        private int width = 150;
-        private int height = 150;
-
+        
         public frmMain()
         {
             InitializeComponent();
@@ -37,46 +35,55 @@ namespace QRCodeForm
             groupBoxSMS.Visible = false;
             groupBoxTelefone.Visible = false;
             groupBoxGeoLocalizacao.Visible = false;
-            this.Size = new Size(956, 345);
+            this.Size = new Size(956, 339);
             btnGerar.Location = new Point(814, 264);
         }
 
+        /// <summary>
+        /// Evento do botão gerar QRCode
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnGerar_Click(object sender, EventArgs e)
         {
             try
             {
-
-                width = 250;
-                height = 250;
-
-                var barcodeWriter = new BarcodeWriter();
-                barcodeWriter.Format = BarcodeFormat.QR_CODE;
-                barcodeWriter.Options.Margin = 1;
-                barcodeWriter.Options = new ZXing.Common.EncodingOptions
+                if(cmbTipoInformacao.SelectedIndex != 0)
                 {
-                    Width = width,
-                    Height = height
-                };
+                    var barcodeWriter = new BarcodeWriter();
+                    barcodeWriter.Format = BarcodeFormat.QR_CODE;
+                    barcodeWriter.Options.Margin = 1;
+                    barcodeWriter.Options = new ZXing.Common.EncodingOptions
+                    {
+                        Width = 300,
+                        Height = 300
+                    };
 
-                fileLocalitation = String.Format(@"{0}\{1}.jpg", filePath, txtNomeQRCode.Text);
+                    fileLocalitation = String.Format(@"{0}\{1}.jpg", filePath, txtNomeQRCode.Text);
 
-                barcodeWriter.Write(FormatarConteudo(cmbTipoInformacao.SelectedIndex)).Save(fileLocalitation, ImageFormat.Jpeg);
+                    barcodeWriter.Write(FormatarConteudo(cmbTipoInformacao.SelectedIndex)).Save(fileLocalitation, ImageFormat.Jpeg);
 
-                if (File.Exists(fileLocalitation))
-                {
-                    pictureBox1.Size = new Size(width, height);
-                    pictureBox1.ImageLocation = fileLocalitation;
+                    if (File.Exists(fileLocalitation))
+                    {
+                        pictureBox1.Size = new Size(300, 300);
+                        pictureBox1.ImageLocation = fileLocalitation;
+                    }
                 }
+                else
+                    MessageBox.Show($"Selecione um tipo de informação na lista do combo!", "Selecione um tipo de informação", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
             }
             catch (Exception ex)
             {
                 MessageBox.Show($"Ocorreu um erro ao gerar QRCode {ex.Message}", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            finally
-            {
-            }
+            }            
         }
 
+        /// <summary>
+        /// Evento do botão para abrir a pasta aonde os arquivos de QRCode estão sendo gravados
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnAbrirLocalizacao_Click(object sender, EventArgs e)
         {
             if (Directory.Exists(filePath))
@@ -85,7 +92,11 @@ namespace QRCodeForm
             }
         }
 
-
+        /// <summary>
+        /// Evento do Combobox quando é selecionado um item na lista
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void cmbTipoInformacao_SelectedIndexChanged(object sender, EventArgs e)
         {
             //Index da lista
@@ -105,8 +116,7 @@ namespace QRCodeForm
                     groupBoxURL.Visible = false;
                     groupBoxSMS.Visible = false;
                     groupBoxTelefone.Visible = false;
-                    groupBoxGeoLocalizacao.Visible = false;
-                    this.Size = new Size(956, 345);
+                    groupBoxGeoLocalizacao.Visible = false;                   
                     btnGerar.Location = new Point(814, 264);
                     break;
                 case 1:
@@ -116,8 +126,7 @@ namespace QRCodeForm
                     groupBoxEmail.Visible = false;
                     groupBoxSMS.Visible = false;
                     groupBoxTelefone.Visible = false;
-                    groupBoxGeoLocalizacao.Visible = false;
-                    this.Size = new Size(956, 345);
+                    groupBoxGeoLocalizacao.Visible = false;                    
                     btnGerar.Location = new Point(814, 264);
                     break;
                 case 2:
@@ -127,8 +136,7 @@ namespace QRCodeForm
                     groupBoxTexto.Visible = false;
                     groupBoxSMS.Visible = false;
                     groupBoxTelefone.Visible = false;
-                    groupBoxGeoLocalizacao.Visible = false;
-                    this.Size = new Size(956, 345);
+                    groupBoxGeoLocalizacao.Visible = false;                   
                     btnGerar.Location = new Point(814, 264);
                     break;
                 case 3:
@@ -138,8 +146,7 @@ namespace QRCodeForm
                     groupBoxURL.Visible = false;
                     groupBoxTexto.Visible = false;
                     groupBoxTelefone.Visible = false;
-                    groupBoxGeoLocalizacao.Visible = false;
-                    this.Size = new Size(956, 345);
+                    groupBoxGeoLocalizacao.Visible = false;                 
                     btnGerar.Location = new Point(814, 264);
                     break;
                 case 4:
@@ -149,8 +156,7 @@ namespace QRCodeForm
                     groupBoxEmail.Visible = false;
                     groupBoxURL.Visible = false;
                     groupBoxTexto.Visible = false;
-                    groupBoxGeoLocalizacao.Visible = false;
-                    this.Size = new Size(956, 345);
+                    groupBoxGeoLocalizacao.Visible = false;                  
                     btnGerar.Location = new Point(814, 264);
                     break;
                 case 5:
@@ -160,8 +166,7 @@ namespace QRCodeForm
                     groupBoxSMS.Visible = false;
                     groupBoxEmail.Visible = false;
                     groupBoxURL.Visible = false;
-                    groupBoxTexto.Visible = false;                    
-                    this.Size = new Size(956, 345);
+                    groupBoxTexto.Visible = false;                                       
                     btnGerar.Location = new Point(814, 264);
                     break;
                 default:
@@ -172,6 +177,12 @@ namespace QRCodeForm
             var teste = cmbTipoInformacao.SelectedText;
         }
 
+        /// <summary>
+        /// Método formata o tipo de dado e devolve uma string que será gravada no QR.
+        /// Esta formatação auxilia os leituros do mobile a identificar e encaminhar a informação para determinada aplicação, como sms, email, chamada, etc.
+        /// </summary>
+        /// <param name="indexTipo">Valor do index do item selecionado</param>
+        /// <returns>Retorna a string formatada conforme o tipo do item selecionado</returns>
         private string FormatarConteudo(int indexTipo)
         {
             string conteudo = string.Empty;

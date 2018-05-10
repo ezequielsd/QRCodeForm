@@ -37,7 +37,6 @@
             this.btnAbrirLocalizacao = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBoxTexto = new System.Windows.Forms.GroupBox();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.groupBoxURL = new System.Windows.Forms.GroupBox();
             this.txtURL = new System.Windows.Forms.TextBox();
             this.cmbTipoInformacao = new System.Windows.Forms.ComboBox();
@@ -53,11 +52,11 @@
             this.groupBoxTelefone = new System.Windows.Forms.GroupBox();
             this.txtNumeroTelefone = new System.Windows.Forms.TextBox();
             this.groupBoxGeoLocalizacao = new System.Windows.Forms.GroupBox();
-            this.txtLatitude = new System.Windows.Forms.TextBox();
-            this.txtLogitude = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.txtLogitude = new System.Windows.Forms.TextBox();
+            this.txtLatitude = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBoxTexto.SuspendLayout();
@@ -70,45 +69,45 @@
             // 
             // btnGerar
             // 
-            this.btnGerar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGerar.Location = new System.Drawing.Point(814, 264);
+            this.btnGerar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGerar.Location = new System.Drawing.Point(814, 261);
             this.btnGerar.Name = "btnGerar";
             this.btnGerar.Size = new System.Drawing.Size(119, 23);
-            this.btnGerar.TabIndex = 3;
+            this.btnGerar.TabIndex = 100;
             this.btnGerar.Text = "Gerar QRCode";
             this.btnGerar.UseVisualStyleBackColor = true;
             this.btnGerar.Click += new System.EventHandler(this.btnGerar_Click);
             // 
             // txtTextoQRCode
             // 
-            this.txtTextoQRCode.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTextoQRCode.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTextoQRCode.Location = new System.Drawing.Point(21, 31);
             this.txtTextoQRCode.Name = "txtTextoQRCode";
-            this.txtTextoQRCode.Size = new System.Drawing.Size(585, 22);
+            this.txtTextoQRCode.Size = new System.Drawing.Size(585, 20);
             this.txtTextoQRCode.TabIndex = 2;
             // 
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.White;
-            this.pictureBox1.Location = new System.Drawing.Point(12, 9);
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(250, 250);
+            this.pictureBox1.Size = new System.Drawing.Size(300, 300);
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
             // 
             // txtNomeQRCode
             // 
-            this.txtNomeQRCode.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNomeQRCode.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNomeQRCode.Location = new System.Drawing.Point(21, 30);
             this.txtNomeQRCode.Name = "txtNomeQRCode";
-            this.txtNomeQRCode.Size = new System.Drawing.Size(304, 22);
+            this.txtNomeQRCode.Size = new System.Drawing.Size(304, 20);
             this.txtNomeQRCode.TabIndex = 1;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(299, 9);
+            this.label3.Location = new System.Drawing.Point(302, 9);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(225, 25);
             this.label3.TabIndex = 6;
@@ -117,7 +116,7 @@
             // btnAbrirLocalizacao
             // 
             this.btnAbrirLocalizacao.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAbrirLocalizacao.Location = new System.Drawing.Point(168, 277);
+            this.btnAbrirLocalizacao.Location = new System.Drawing.Point(814, 232);
             this.btnAbrirLocalizacao.Name = "btnAbrirLocalizacao";
             this.btnAbrirLocalizacao.Size = new System.Drawing.Size(119, 23);
             this.btnAbrirLocalizacao.TabIndex = 7;
@@ -145,14 +144,6 @@
             this.groupBoxTexto.TabStop = false;
             this.groupBoxTexto.Text = "Texto a ser gravado no QRCode";
             // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.LightGray;
-            this.panel1.Location = new System.Drawing.Point(277, 12);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(10, 247);
-            this.panel1.TabIndex = 15;
-            // 
             // groupBoxURL
             // 
             this.groupBoxURL.Controls.Add(this.txtURL);
@@ -165,10 +156,10 @@
             // 
             // txtURL
             // 
-            this.txtURL.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtURL.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtURL.Location = new System.Drawing.Point(21, 31);
             this.txtURL.Name = "txtURL";
-            this.txtURL.Size = new System.Drawing.Size(455, 22);
+            this.txtURL.Size = new System.Drawing.Size(455, 20);
             this.txtURL.TabIndex = 2;
             // 
             // cmbTipoInformacao
@@ -210,10 +201,10 @@
             // 
             // txtEmail
             // 
-            this.txtEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEmail.Location = new System.Drawing.Point(21, 31);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(455, 22);
+            this.txtEmail.Size = new System.Drawing.Size(455, 20);
             this.txtEmail.TabIndex = 2;
             // 
             // groupBoxSMS
@@ -267,12 +258,12 @@
             // 
             // txtSMS
             // 
-            this.txtSMS.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSMS.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSMS.Location = new System.Drawing.Point(21, 81);
             this.txtSMS.Multiline = true;
             this.txtSMS.Name = "txtSMS";
             this.txtSMS.Size = new System.Drawing.Size(455, 54);
-            this.txtSMS.TabIndex = 2;
+            this.txtSMS.TabIndex = 20;
             // 
             // groupBoxTelefone
             // 
@@ -306,30 +297,15 @@
             this.groupBoxGeoLocalizacao.TabStop = false;
             this.groupBoxGeoLocalizacao.Text = "GeoLocalização: Informe os pontos";
             // 
-            // txtLatitude
+            // label8
             // 
-            this.txtLatitude.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtLatitude.Location = new System.Drawing.Point(54, 35);
-            this.txtLatitude.Name = "txtLatitude";
-            this.txtLatitude.Size = new System.Drawing.Size(123, 22);
-            this.txtLatitude.TabIndex = 2;
-            // 
-            // txtLogitude
-            // 
-            this.txtLogitude.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtLogitude.Location = new System.Drawing.Point(255, 36);
-            this.txtLogitude.Name = "txtLogitude";
-            this.txtLogitude.Size = new System.Drawing.Size(123, 22);
-            this.txtLogitude.TabIndex = 3;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(6, 40);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(48, 13);
-            this.label6.TabIndex = 22;
-            this.label6.Text = "Latitude:";
+            this.label8.AutoSize = true;
+            this.label8.ForeColor = System.Drawing.Color.Red;
+            this.label8.Location = new System.Drawing.Point(206, 11);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(170, 13);
+            this.label8.TabIndex = 22;
+            this.label8.Text = "Exemplo:  -26.299912, -48.833053";
             // 
             // label7
             // 
@@ -340,15 +316,30 @@
             this.label7.TabIndex = 23;
             this.label7.Text = "Longitude:";
             // 
-            // label8
+            // label6
             // 
-            this.label8.AutoSize = true;
-            this.label8.ForeColor = System.Drawing.Color.Red;
-            this.label8.Location = new System.Drawing.Point(206, 11);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(170, 13);
-            this.label8.TabIndex = 22;
-            this.label8.Text = "Exemplo:  -26.299912, -48.833053";
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(6, 40);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(48, 13);
+            this.label6.TabIndex = 22;
+            this.label6.Text = "Latitude:";
+            // 
+            // txtLogitude
+            // 
+            this.txtLogitude.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtLogitude.Location = new System.Drawing.Point(255, 36);
+            this.txtLogitude.Name = "txtLogitude";
+            this.txtLogitude.Size = new System.Drawing.Size(123, 22);
+            this.txtLogitude.TabIndex = 3;
+            // 
+            // txtLatitude
+            // 
+            this.txtLatitude.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtLatitude.Location = new System.Drawing.Point(54, 35);
+            this.txtLatitude.Name = "txtLatitude";
+            this.txtLatitude.Size = new System.Drawing.Size(123, 22);
+            this.txtLatitude.TabIndex = 2;
             // 
             // frmMain
             // 
@@ -362,7 +353,6 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.cmbTipoInformacao);
             this.Controls.Add(this.groupBoxURL);
-            this.Controls.Add(this.panel1);
             this.Controls.Add(this.groupBoxTexto);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnAbrirLocalizacao);
@@ -406,7 +396,6 @@
         private System.Windows.Forms.Button btnAbrirLocalizacao;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBoxTexto;
-        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.GroupBox groupBoxURL;
         private System.Windows.Forms.TextBox txtURL;
         private System.Windows.Forms.ComboBox cmbTipoInformacao;
